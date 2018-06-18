@@ -7,7 +7,7 @@ import Json.Encode exposing (Value)
 
 main : TestProgram
 main =
-    run emit Example.guardianNames
+    run emit Example.all
 
 
 port emit : ( String, Value ) -> Cmd msg
