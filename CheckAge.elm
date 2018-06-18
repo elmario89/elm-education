@@ -15,7 +15,15 @@ validateAge person =
     person.age >= 18
 
 
+showAccessMessage isAdult =
+    if isAdult then
+        "You are allowed to enter here"
+    else
+        "Please leave the site"
+
+
 main =
     validateAge mikhail
+        |> showAccessMessage
         |> toString
         |> Html.text
