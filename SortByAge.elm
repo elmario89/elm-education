@@ -13,6 +13,6 @@ persons =
 
 main =
     List.sortBy .age persons
-        |> List.map (\person -> person.age)
+        |> List.map .age
         |> toString
         |> Html.text
