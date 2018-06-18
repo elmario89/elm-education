@@ -11,12 +11,8 @@ persons =
     [ Person "Mikhail" "Smirnov" 28, Person "Andreas" "Rios" 33, Person "Example" "Person" 7 ]
 
 
-sortByAge person1 person2 =
-    compare person1.age person2.age
-
-
 main =
-    List.sortWith sortByAge persons
+    List.sortBy .age persons
         |> List.map (\person -> person.age)
         |> toString
         |> Html.text
